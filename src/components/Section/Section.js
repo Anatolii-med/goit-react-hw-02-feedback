@@ -1,8 +1,8 @@
 import React from 'react';
-import { TitleName } from './titleRender.styled';
+import { TitleName } from './Section.styled';
 import PropTypes from 'prop-types';
 
-class TitleRender extends React.Component {
+class Section extends React.Component {
     render() {
         return (
             <div>
@@ -13,9 +13,9 @@ class TitleRender extends React.Component {
     }
 }
 
-export default TitleRender;
+export default Section;
 
-TitleRender.propTyps = {
+Section.propTyps = {
     title: PropTypes.string,
     children: PropTypes.string.isRequired,
 };

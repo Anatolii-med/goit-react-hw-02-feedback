@@ -1,8 +1,8 @@
 import React from 'react';
-import { RateButton } from './buttonRender.styled';
+import { RateButton } from './FeedbackOptions.styled';
 import PropTypes from 'prop-types';
 
-class ButtonRender extends React.Component {
+class FeedbackOptions extends React.Component {
     render() {
         return this.props.buttons.map(button => {
             return (
@@ -10,7 +10,7 @@ class ButtonRender extends React.Component {
                     type="button"
                     key={button}
                     name={button}
-                    onClick={this.props.onButtonClick}
+                    onClick={this.props.onLeaveFeedback}
                 >
                     {button}
                 </RateButton>
@@ -19,9 +19,9 @@ class ButtonRender extends React.Component {
     }
 }
 
-export default ButtonRender;
+export default FeedbackOptions;
 
-ButtonRender.propTypes = {
+FeedbackOptions.propTypes = {
     button: PropTypes.string,
-    onButtonClick: PropTypes.func.isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
-import Title from './titleRender/titleRender';
+import Section from './Section/Section';
 import StatRender from './statRender/statRender';
-import ButtonRender from './buttonRender/buttonRender';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 
 class App extends React.Component {
     state = {
@@ -37,12 +37,14 @@ class App extends React.Component {
         const { good, bad, neutral } = this.state;
         return (
             <>
-                <Title title="Please leave feedback" />
-                <ButtonRender
-                    buttons={buttonLabels}
-                    onButtonClick={this.onButtonClick}
-                />
-                <Title title="Statistic">
+                <Section title="Please leave feedback">
+                    <FeedbackOptions
+                        buttons={buttonLabels}
+                        onLeaveFeedback={this.onButtonClick}
+                    />
+                </Section>
+
+                <Section title="Statistic">
                     {this.countTotalFeedback() === 0 ? (
                         <span> No feedback given</span>
                     ) : (
@@ -54,7 +56,7 @@ class App extends React.Component {
                             positive={this.countPositiveFeedbackPercentage()}
                         />
                     )}
-                </Title>
+                </Section>
             </>
         );
     }
