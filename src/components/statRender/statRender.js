@@ -1,5 +1,6 @@
 import React from 'react';
 import { StatResulrWrap, StatItems } from './statRender.styled';
+import PropTypes from 'prop-types';
 
 class StatRender extends React.Component {
     render() {
@@ -18,3 +19,11 @@ class StatRender extends React.Component {
 }
 
 export default StatRender;
+
+StatRender.propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    positive: PropTypes.string.isRequired,
+};

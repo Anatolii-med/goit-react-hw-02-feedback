@@ -1,5 +1,6 @@
 import React from 'react';
 import { TitleName } from './titleRender.styled';
+import PropTypes from 'prop-types';
 
 class TitleRender extends React.Component {
     render() {
@@ -13,3 +14,8 @@ class TitleRender extends React.Component {
 }
 
 export default TitleRender;
+
+TitleRender.propTyps = {
+    title: PropTypes.string,
+    children: PropTypes.string.isRequired,
+};

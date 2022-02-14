@@ -1,5 +1,7 @@
 import React from 'react';
 import { RateButton } from './buttonRender.styled';
+import PropTypes from 'prop-types';
+
 class ButtonRender extends React.Component {
     render() {
         return this.props.buttons.map(button => {
@@ -18,3 +20,8 @@ class ButtonRender extends React.Component {
 }
 
 export default ButtonRender;
+
+ButtonRender.propTypes = {
+    button: PropTypes.string,
+    onButtonClick: PropTypes.func.isRequired,
+};

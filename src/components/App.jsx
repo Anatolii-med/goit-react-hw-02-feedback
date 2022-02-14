@@ -1,7 +1,7 @@
 import React from 'react';
-import Title from './titleRender';
-import StatRender from './statRender';
-import ButtonRender from './buttonRender';
+import Title from './titleRender/titleRender';
+import StatRender from './statRender/statRender';
+import ButtonRender from './buttonRender/buttonRender';
 
 class App extends React.Component {
     state = {
