@@ -10,8 +10,7 @@ class App extends React.Component {
         bad: 0,
     };
 
-    onButtonClick = e => {
-        const { name } = e.target;
+    onButtonClick = name => {
         this.setState(prev => {
             return {
                 [name]: prev[name] + 1,

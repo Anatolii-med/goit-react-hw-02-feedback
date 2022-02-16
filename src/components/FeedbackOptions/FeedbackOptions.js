@@ -4,13 +4,16 @@ import PropTypes from 'prop-types';
 
 class FeedbackOptions extends React.Component {
     render() {
-        return this.props.buttons.map(button => {
+        const { buttons, onLeaveFeedback } = this.props;
+        return buttons.map(button => {
             return (
                 <RateButton
                     type="button"
                     key={button}
                     name={button}
-                    onClick={this.props.onLeaveFeedback}
+                    onClick={() => {
+                        onLeaveFeedback(button);
+                    }}
                 >
                     {button}
                 </RateButton>
